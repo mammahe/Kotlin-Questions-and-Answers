@@ -1537,3 +1537,25 @@ The default implementation of Kotlin property includes field and accessors (gett
 Though both may seem very similar they are in fact very different and serve very different purposes. Abstract classes are meant to serve the purpose of Generalizing behavior while interfaces are meant to serve the purpose of Standardizing behavior.
 
 **Source:** _paulfran.co/_
+     
+### What is an inline function in Kotlin?
+**Answer:**
+Inline function instruct compiler to insert complete body of the function wherever that function got used in the code. To use an Inline function, all you need to do is just add an inline keyword at the beginning of the function declaration.   
+
+### What are Reified types in Kotlin?
+**Answer:**
+When you are using the concept of Generics to pass some class as a parameter to some function and you need to access the type of that class, then you need to use the reified keyword in Kotlin.
+     
+### What is the operator overloading in Kotlin?
+**Answer:**
+In Kotlin, we can use the same operator to perform various tasks and this is known as operator overloading. To do so, we need to provide a member function or an extension function with a fixed name and operator keyword before the function name because normally also, when we are using some operator then under the hood some function gets called. For example, if you are writing num1+num2, then it gets converted to num1.plus(num2).
+
+### What are labels in Kotlin?
+**Answer:**
+Any expression written in Kotlin is called a label. For example, if we are having a for-loop in our Kotlin code then we can name that for-loop expression as a label and will use the label name for the for-loop.
+
+We can create a label by using an identifier followed by the @ sign. For example, name@, loop@, xyz@, etc.
+     
+### What are the benefits of using a Sealed Class over Enum?
+**Answer:**
+Sealed classes give us the flexibility of having different types of subclasses and also containing the state. The important point to be noted here is the subclasses that are extending the Sealed classes should be either nested classes of the Sealed class or should be declared in the same file as that of the Sealed class
