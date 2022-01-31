@@ -379,7 +379,7 @@ public final class SomeSingleton {
 This is the preferred way to implement singletons on a JVM because it enables thread-safe lazy initialization without having to rely on a locking algorithm like the complex double-checked locking.
 
 **Source:** _medium.com_
-### Q17: Where should I use var and where val? ☆☆
+### Where should I use var and where val? ☆☆
 
 **Answer:**
 Use **var** where value is changing _frequently_. For example while getting location of android device:
@@ -395,7 +395,7 @@ val stringVariables : String = "Button's Constant or final Text"
 ```
 
 **Source:** _stackoverflow.com_
-### Q18: Explain what is wrong with that code? ☆☆☆
+### Explain what is wrong with that code? ☆☆☆
 
 **Details:**
 Why is this code wrong?
@@ -431,7 +431,7 @@ class Student (var name: String) {
 ```
 
 **Source:** _www.programiz.com_
-### Q19: What will be result of the following code execution? ☆☆☆
+### What will be result of the following code execution? ☆☆☆
 
 **Details:**
 What will be the output?
@@ -456,7 +456,7 @@ Hola
 ```
 
 **Source:** _dzone.com_
-### Q20: What is the difference between suspending vs. blocking? ☆☆☆
+### What is the difference between suspending vs. blocking? ☆☆☆
 
 **Answer:**
 * A **blocking** call to a function means that a call to any other function, from the same thread, will halt the parent’s execution. Following up, this means that if you make a blocking call on the main thread’s execution, you effectively freeze the UI. Until that blocking calls finishes, the user will see a static screen, which is not a good thing.
@@ -465,7 +465,7 @@ Hola
 
 **Source:** _www.raywenderlich.com_
 
-### Q1: What is the equivalent of Java static methods in Kotlin? ☆☆☆
+### What is the equivalent of Java static methods in Kotlin? ☆☆☆
 
 **Answer:**
 Place the function in the **companion object**.
@@ -502,7 +502,7 @@ import foo.bar
 
 
 **Source:** _stackoverflow.com_
-### Q2: What is suspending function in Kotlin? ☆☆☆
+### What is suspending function in Kotlin? ☆☆☆
 
 **Answer:**
 A **suspending function** is just a regular Kotlin function with an additional suspend modifier which indicates that the function can suspend the execution of a coroutine without blocking the current thread. This means that the code you are looking at might stop executing at the moment it calls a suspending function, and will resume at some later time. However, it doesn’t say anything about what the current thread will do in the meantime.
@@ -510,7 +510,7 @@ A **suspending function** is just a regular Kotlin function with an additional s
 Suspending functions can invoke any other regular functions, but to actually suspend the execution, it has to be another suspending function.A suspending function cannot be invoked from a regular function, therefore several so-called coroutine builders are provided, which allow calling a suspending function from a regular non-suspending scope like `launch`, `async`, `runBlocking`.
 
 **Source:** _proandroiddev.com_
-### Q3: Explain advantages of "when" vs "switch" in Kotlin ☆☆☆
+### Explain advantages of "when" vs "switch" in Kotlin ☆☆☆
 
 **Answer:**
 
@@ -565,7 +565,7 @@ when(number) {
 ```
 
 **Source:** _blog.mindorks.com_
-### Q4: What are the advantages of Kotlin over Java? ☆☆☆
+### What are the advantages of Kotlin over Java? ☆☆☆
 
 **Answer:**
 Basically for me less thinking required to write kotlin equivalent to most java code:
@@ -631,7 +631,7 @@ primary constructor
 *   kotlin: very nice to be able to quickly write a constructor without any constructor function or extra needless declarations
 
 **Source:** _www.reddit.com_
-### Q5: What are some disadvantages of Kotlin? ☆☆☆
+###  What are some disadvantages of Kotlin? ☆☆☆
 
 **Answer:**
 Some think that Kotlin is a mess of extra syntax and keywords. Here are a few keywords which have non-obvious meanings: internal, crossinline, expect, reified, sealed, inner, open. Java has none of these. Kotlin is also amusingly inconsistent in its keywords: a function is is declared with ‘fun’, but an interface is declared with ‘interface’ (not ‘inter’?). Kotlin also doesn’t have checked exceptions. Checked exceptions have become unfashionable, yet many (including me) find them a powerful way to ensure that your code is robust. Finally, Kotlin hides a lot of what goes on. In Java, you can trace through almost every step of program logic. This can be vital for hunting down bugs. In Kotlin, if you define a data class, then getters, setters, equality testing, to string, and hash code are added for you invisibly. This can be a bad idea.
@@ -645,14 +645,14 @@ Also according docs, what Java has that Kotlin does not:
 * Ternary-operator a ? b : c
 
 **Source:** _www.quora.com_
-### Q6: What is the difference between "open" and "public" in Kotlin? ☆☆☆
+### What is the difference between "open" and "public" in Kotlin? ☆☆☆
 
 **Answer:**
 * The **open** keyword means “open for extension“. The open annotation on a class is the opposite of Java's `final`: _it allows others to inherit from this class_.
 * If you do not specify any visibility modifier, **public** is used by default, which means that your declarations will be visible everywhere. **public** is the default if nothing else is specified explicitly.
 
 **Source:** _stackoverflow.com_
-### Q7: What is the difference between “const” and “val”? ☆☆☆
+###  What is the difference between “const” and “val”? ☆☆☆
 
 **Answer:**
 `const`s are compile time constants. Meaning that their value has to be assigned during compile time, unlike `val`s, where it can be done at runtime.
@@ -670,7 +670,7 @@ const val bar = "Hello world"           //Also okay
 ```
 
 **Source:** _stackoverflow.com_
-### Q8: How to convert List to Map in Kotlin? ☆☆☆
+### How to convert List to Map in Kotlin? ☆☆☆
 
 **Answer:**
 You have two choices:
@@ -688,7 +688,7 @@ val map = friends.map { it.facebookId to it.points }.toMap()
 ```
 
 **Source:** _stackoverflow.com_
-### Q9: What is the idiomatic way to deal with nullable values, referencing or converting them? ☆☆☆
+### What is the idiomatic way to deal with nullable values, referencing or converting them? ☆☆☆
 
 **Details:**
 If I have a nullable type `Xyz?`, I want to reference it or convert it to a non-nullable type `Xyz`. What is the idiomatic way of doing so in Kotlin?
@@ -729,7 +729,7 @@ if (something != null) {
 ```
 
 **Source:** _stackoverflow.com_
-### Q10: What is the difference between List and Array types? ☆☆☆
+### What is the difference between List and Array types? ☆☆☆
 
 **Answer:**
 The major difference from usage side is that `Arrays` have a fixed size while `(Mutable)List `can adjust their size dynamically. Moreover `Array` is mutable whereas `List` is not.
@@ -739,7 +739,7 @@ Furthermore `kotlin.collections.List` is an interface implemented among others b
 On the jvm level `Array` is represented by arrays. `List` on the other hand is represented by `java.util.List` since there are no immutable collections equivalents available in Java.
 
 **Source:** _stackoverflow.com_
-### Q11: val mutableList vs var immutableList. When to use which in Kotlin? ☆☆☆
+### val mutableList vs var immutableList. When to use which in Kotlin? ☆☆☆
 
 **Answer:**
 Mutable and immutable list increase the design clarity of the model. <br>
@@ -766,7 +766,7 @@ You have also some disadvantages:
 * In some cases, immutability can make the code more complex, when you tediously need to change single fields. In Kotlin, data classes come with a built-in copy() method where you can copy an instance, while providing new values for only some of the fields.
 
 **Source:** _stackoverflow.com_
-### Q12: What is a difference between a class and object in Kotlin? ☆☆☆
+### What is a difference between a class and object in Kotlin? ☆☆☆
 
 **Answer:**
 * An **object** is a singleton. You do not need to create an instance to use it.
@@ -775,7 +775,7 @@ You have also some disadvantages:
 The primary use case of `object` in Kotlin is because Kotlin tries to do away with static, and primitives, leaving us with a purely object oriented language. Kotlin still uses `static` and primitives underneath the hood, but it discourages devs to use those concepts any more. Instead, now Kotlin replaces static with singleton object instances. Where you would previously use static field in Java, in Kotlin you will now create an `object`, and put that field in the `object`.
 
 **Source:** _stackoverflow.com_
-### Q13: How is it recommended to create constants in Kotlin? ☆☆☆
+### How is it recommended to create constants in Kotlin? ☆☆☆
 
 **Answer:**
 In Kotlin, if you want to create the local constants which are supposed to be used with in the class then you can create it like below:
@@ -798,7 +798,7 @@ object DbConstants {
 ```
 
 **Source:** _stackoverflow.com_
-### Q14: May you use IntArray and an Array<Int> is in Kotlin interchangeably? ☆☆☆
+### May you use IntArray and an Array<Int> is in Kotlin interchangeably? ☆☆☆
 
 **Answer:**
 `Array<Int>` is an `Integer[]` under the hood, while `IntArray` is an `int[]`. 
@@ -813,7 +813,7 @@ So **no**, we can't use them interchangeably.
 
 
 **Source:** _stackoverflow.com_
-### Q15: Rewrite this code in Kotlin ☆☆☆
+### Rewrite this code in Kotlin ☆☆☆
 
 **Details:**
 Can you rewrite this Java code in Kotlin?
@@ -841,7 +841,7 @@ object Singleton
 ```
 
 **Source:** _antonioleiva.com_
-### Q16: How would you create a singleton with parameter in Kotlin? ☆☆☆
+### How would you create a singleton with parameter in Kotlin? ☆☆☆
 
 **Answer:**
 Because a Kotlin `object` can’t have any constructor, you can’t pass any argument to it.
@@ -869,7 +869,7 @@ class UsersDatabase : RoomDatabase() {
 ```
 
 **Source:** _stackoverflow.com_
-### Q17: What is the Kotlin double-bang (!!) operator? ☆☆☆
+### What is the Kotlin double-bang (!!) operator? ☆☆☆
 
 **Answer:**
 The **not-null assertion operator !!** converts any value to a non-null type and throws a `KotlinNullPointerException` exception if the value is null.
@@ -885,7 +885,7 @@ fun main(args: Array<String>) {
 This operator should be used in cases where the developer is guaranteeing – it allows you to be 100% sure that its value is not null. 
 
 **Source:** _stackoverflow.com_
-### Q18: What is the purpose of Unit-returning in functions? Why is VALUE there? What is this VALUE? ☆☆☆
+### What is the purpose of Unit-returning in functions? Why is VALUE there? What is this VALUE? ☆☆☆
 
 **Details:**
 Explain what is the purpose of Unit-returning in functions? Why is VALUE there? What is this VALUE?
@@ -911,7 +911,7 @@ The purpose is the same as C's or Java's `void`. Only Unit is a proper type, so 
 4. `UNIT` actually contains valuable information, it basically just means "DONE". It just returns the information to the caller, that the method has been finished. 
 
 **Source:** _stackoverflow.com_
-### Q19: When would you use Elvis operator in Kotlin? ☆☆☆
+### When would you use Elvis operator in Kotlin? ☆☆☆
 
 **Answer:**
 The Elvis operator is part of many programming languages, e.g. Kotlin but also Groovy or C#. The Elvis operator is the ternary operator with its second operand omitted.
@@ -922,7 +922,7 @@ x ?: y // yields `x` if `x` is not null, `y` otherwise.
 If `x` isn't null, then it will be returned. If it is null, then the `y` will be returned. 
 
 **Source:** _kotlinlang.org_
-### Q40: What are scope functions in Kotlin? ☆☆☆
+### What are scope functions in Kotlin? ☆☆☆
 
 **Answer:**
 The Kotlin standard library contains several functions whose sole purpose is to execute a block of code within the context of an object. When you call such a function on an object with a lambda expression provided, it forms a temporary scope. In this scope, you can access the object without its name. Such functions are called **scope functions**. 
@@ -936,7 +936,7 @@ There are five of them:
 
 **Source:** _stackoverflow.com_
 
-### Q1: Why is there no static keyword in Kotlin? ☆☆☆☆
+### Why is there no static keyword in Kotlin? ☆☆☆☆
 
 **Answer:**
 _The main advantage of this is that everything is an object_. Companion objects can inherit from other classes or implement interfaces and generally behave like any other singleton.
@@ -944,7 +944,7 @@ _The main advantage of this is that everything is an object_. Companion objects 
 In Java, static members are treated very differently than object members. This means that you can't do things like implementing an interface or putting your class "instance" into a map or pass it as a parameter to a method that takes Object. Companion objects allow for these things. That's the advantage.
 
 **Source:** _softwareengineering.stackexchange.com_
-### Q2: What is inline class in Kotlin and when do we need one? Provide an example. ☆☆☆☆
+### What is inline class in Kotlin and when do we need one? Provide an example. ☆☆☆☆
 
 **Answer:**
 Sometimes it is necessary for business logic to create a wrapper around some type. However, it introduces runtime overhead due to additional heap allocations. Moreover, if the wrapped type is primitive, the performance hit is terrible, because primitive types are usually heavily optimized by the runtime.
@@ -977,7 +977,7 @@ Some notes about inline classes:
 
 
 **Source:** _www.baeldung.com_
-### Q3: Explain the difference between Inline classes vs type aliases ☆☆☆☆
+### Explain the difference between Inline classes vs type aliases ☆☆☆☆
 
 **Answer:**
 The crucial difference is that type aliases are **assignment-compatible** with their underlying type (and with other type aliases with the same underlying type), while inline classes are not.
@@ -1007,7 +1007,7 @@ fun main() {
 ```
 
 **Source:** _blog.mindorks.com_
-### Q4: What is Coroutine Scope and how is that different from Coroutine Context? ☆☆☆☆
+### What is Coroutine Scope and how is that different from Coroutine Context? ☆☆☆☆
 
 **Answer:**
 * Coroutines always execute in some context represented by a value of the **CoroutineContext** type, defined in the Kotlin standard library. The coroutine context is a set of various elements. The main elements are the **Job** of the coroutine.
@@ -1035,7 +1035,7 @@ You might say that **CoroutineScope** formalizes the way the **CoroutineContext*
 
 
 **Source:** _stackoverflow.com_
-### Q5: Imagine you moving your code from Java to Kotlin. How would you rewrite this code in Kotlin? ☆☆☆☆☆
+### Imagine you moving your code from Java to Kotlin. How would you rewrite this code in Kotlin? ☆☆☆☆☆
 
 **Details:**
 ```java
@@ -1060,7 +1060,7 @@ class MyClass {
 ```
 
 **Source:** _stackoverflow.com_
-### Q6: How would you override default getter for Kotlin data class? ☆☆☆☆
+### How would you override default getter for Kotlin data class? ☆☆☆☆
 
 **Details:**
 Given the following Kotlin class:
@@ -1097,7 +1097,7 @@ How would I override the Int getter so that it returns `0` if the value negative
  ```
 
 **Source:** _stackoverflow.com_
-### Q7: What is Kotlin backing field is used for? ☆☆☆☆
+### What is Kotlin backing field is used for? ☆☆☆☆
 
 **Answer:**
 Backing field is an autogenerated field for any property which can only be used inside the accessors(getter or setter) and will be present only if it uses the default implementation of at least one of the accessors, or if a custom accessor references it through the `field` identifier. _This backing field is used to avoid the recursive call of an accessor which ultimately prevents the StackOverflowError._
@@ -1113,7 +1113,7 @@ var selectedColor: Int = someDefaultValue
 ```
 
 **Source:** _stackoverflow.com_
-### Q8: What are Object expressions in Kotlin and when to use them? ☆☆☆☆
+### What are Object expressions in Kotlin and when to use them? ☆☆☆☆
 
 **Answer:**
 Sometimes we need to create an object of some class with slight modification, without explicitly declaring a new subclass for it. Java handles this case with anonymous inner classes. Kotlin uses **object expression** to achieve the same functionality. We can even create an object expression for an interface or abstract class by just implementing their abstract methods.
@@ -1133,7 +1133,7 @@ window.addMouseListener(object : MouseAdapter() {
 ```
 
 **Source:** _kotlinlang.org_
-### Q9: How to create empty constructor for data class in Kotlin? ☆☆☆☆
+### How to create empty constructor for data class in Kotlin? ☆☆☆☆
 
 **Answer:**
 If you give **default values to all the fields** - empty constructor is generated automatically by Kotlin.
@@ -1158,7 +1158,7 @@ data class User(var id: Long,
 ```
 
 **Source:** _stackoverflow.com_
-### Q10: How to create an instance of anonymous class of abstract class in Kotlin? ☆☆☆☆
+### How to create an instance of anonymous class of abstract class in Kotlin? ☆☆☆☆
 
 **Details:**
 Assume that `KeyAdapter` is an abstract class with several methods that can be overridden.
@@ -1184,7 +1184,7 @@ val keyListener = object : KeyAdapter() {
 ```
 
 **Source:** _stackoverflow.com_
-### Q11: Why do we use “companion object” as a kind of replacement for Java static fields in Kotlin? ☆☆☆☆☆
+### Why do we use “companion object” as a kind of replacement for Java static fields in Kotlin? ☆☆☆☆☆
 
 **Answer:**
 Because `static`s are not object-oriented. Kotlin does, however, have globals, which function similarly, and objects, which provide static functionality but remain object-oriented.
@@ -1194,14 +1194,14 @@ Java `static` part of a class can be elegantly expressed in terms of singleton: 
 Apart from naming, it is more powerful than Java static members: it can extend classes and interfaces, and you can reference and pass it around just like other objects.
 
 **Source:** _stackoverflow.com_
-### Q12: What is the difference between “*” and “Any” in Kotlin generics? ☆☆☆☆☆
+### What is the difference between “*” and “Any” in Kotlin generics? ☆☆☆☆☆
 
 **Answer:**
 * `List<*>` can contain objects of any type, but _only that type_, so it can contain `Strings` (but only `Strings`)
 * while `List<Any>` can contain `Strings` and `Integers` and whatnot, all in the same list
 
 **Source:** _stackoverflow.com_
-### Q13: How can I create “static” method for enum in Kotiln? ☆☆☆☆
+### How can I create “static” method for enum in Kotiln? ☆☆☆☆
 
 **Answer:**
 Just like with any other class, you can define a class object in an enum class:
@@ -1219,7 +1219,7 @@ enum class CircleType {
 Then you'll be able to call this function as `CircleType.random()`.
 
 **Source:** _stackoverflow.com_
-### Q14: What is SAM Conversion in Kotlin? ☆☆☆☆☆
+### What is SAM Conversion in Kotlin? ☆☆☆☆☆
 
 **Answer:**
  "SAM" stands for "single abstract method", and "SAM-type" refers to interfaces like Runnable, Callable.
@@ -1229,7 +1229,7 @@ Just like Java 8, Kotlin supports SAM conversions. This means that Kotlin functi
 That means that when you call some Java method from Kotlin, and that method satisfies conditions described above, you can pass lambda or method reference instead.
 
 **Source:** _kotlinlang.org_
-### Q15: Explain the difference between lateinit and lazy in details ☆☆☆☆☆
+### Explain the difference between lateinit and lazy in details ☆☆☆☆☆
 
 **Answer:**
 Here are the significant differences between `lateinit var` and `by lazy { ... }` delegated property:
@@ -1251,7 +1251,7 @@ Here are the significant differences between `lateinit var` and `by lazy { ... }
 * A lambda passed to `by lazy { ... }` may capture references from the context where it is used into its [closure][5].. It will then store the references and release them only once the property has been initialized. This may lead to object hierarchies, such as Android activities, not being released for too long (or ever, if the property remains accessible and is never accessed), so you should be careful about what you use inside the initializer lambda.
 
 **Source:** _stackoverflow.com_
-### Q16: Provide a real use case when inline classes may be useful ☆☆☆☆
+### Provide a real use case when inline classes may be useful ☆☆☆☆
 
 **Answer:**
 Imagine an authentication method in an API that looks as follows:
@@ -1277,7 +1277,7 @@ fun main() {
 ```
 
 **Source:** _kotlinexpertise.com_
-### Q17: What's wrong with that code? ☆☆☆☆☆
+### What's wrong with that code? ☆☆☆☆☆
 
 **Details:**
 Let's say I want to override the Int getter so that it returns 0 if the value negative for the data class. What's bad with that approach?
@@ -1314,7 +1314,7 @@ val person = Person().apply {
 This way you don't have to repeat person several times. Apply is used to keep things that belong together in one place (mostly initializations).
 
 **Source:** _stackoverflow.com_
-### Q19: Rewrite this code using "run" extension function  ☆☆☆☆
+### Rewrite this code using "run" extension function  ☆☆☆☆
 
 **Details:**
 Consider:
@@ -1343,7 +1343,7 @@ val password: Password = PasswordGenerator().run {
 Lambdas in Kotlin implicitly return the result of the last line. That’s why I can omit the temporary variable and store the password directly. Because an extension function is passed to `run` I can also access the password generator’s properties like `seed` or `hash` directly.
 
 **Source:** _stackoverflow.com_
-### Q20: How would you refactor this code using "apply"? ☆☆☆
+### How would you refactor this code using "apply"? ☆☆☆
 
 **Details:**
 Consider:
@@ -1370,7 +1370,7 @@ class Message(message: String, signature: String) {
 
 **Source:** _cargocult.dev_
 
-### Q1: What is The Billion Dollar Mistake? ☆☆☆☆☆
+### What is The Billion Dollar Mistake? ☆☆☆☆☆
 
 **Answer:**
 Kotlin's type system is aimed at eliminating the danger of null references from code, also known as the The Billion Dollar Mistake.
@@ -1382,7 +1382,7 @@ _I call it my billion-dollar mistake. It was the invention of the **null referen
 Tony Hoare at QCon London in 2009 https://en.wikipedia.org/wiki/Tony_Hoare
 
 **Source:** _kotlinlang.org_
-### Q2: What is a motivation to make classes final by default in Kotlin? Do you agree with that decision? ☆☆☆☆☆
+### What is a motivation to make classes final by default in Kotlin? Do you agree with that decision? ☆☆☆☆☆
 
 **Answer:**
 * First Kotlin takes many ideas from the functional programming world and uses immutability as often as it can to avoid all the known problems with mutation. Also proper designing a class for inheritance requires an excruciating amount of work (and building at least 3 separate subclasses, to verify that you base class actually is useful). Most classes should be final. Extending them is probably a bad idea.
@@ -1390,7 +1390,7 @@ Tony Hoare at QCon London in 2009 https://en.wikipedia.org/wiki/Tony_Hoare
 * The second thought which comes to my mind is that inheritance is often missused. There is the principle "Favor composition over inheritance" as a guideline for better designs. So declaring every class as final by default forces the developer to at least stop for a moment and think about alternative ways to solve the problem instead of using inheritance for the wrong reasons.
 
 **Source:** _stackoverflow.com_
-### Q3: How does the reified keyword in Kotlin work? ☆☆☆☆☆
+### How does the reified keyword in Kotlin work? ☆☆☆☆☆
 
 **Answer:**
 In an ordinary generic function like `myGenericFun`, you can't access the type `T` because it is, like in Java, erased at runtime and thus only available at compile time. Therefore, if you want to use the generic type as a normal `Class` in the function body you need to explicitly pass the class as a parameter like the parameter `c` in the example. 
@@ -1410,7 +1410,7 @@ inline fun <reified T : Activity> Activity.startActivity() {
 You can only use `reified` in combination with an _inline function_. Such a function makes the compiler _copy the function's bytecode to every place where the function is being used_ (the function is being "inlined"). When you call an inline function with reified type, the _compiler knows_ the actual type used as a type argument and modifies the generated bytecode to use the corresponding class directly. Therefore calls like `myVar is T` become `myVar is String` (if the type argument were `String`) in the bytecode and at runtime.
 
 **Source:** _stackoverflow.com_
-### Q4: How to implement Builder pattern in Kotlin? ☆☆☆☆☆
+### How to implement Builder pattern in Kotlin? ☆☆☆☆☆
 
 **Answer:**
 First and foremost, in most cases you don't need to use builders in Kotlin because we have default and named arguments but if you need one use:
@@ -1444,7 +1444,7 @@ val car = Car.Builder().model("X").build()
 ```
 
 **Source:** _stackoverflow.com_
-### Q5: When to use and do not use an inline function in Kotlin? ☆☆☆☆☆
+### When to use and do not use an inline function in Kotlin? ☆☆☆☆☆
 
 **Answer:**
 Using higher-order functions imposes certain runtime penalties: each function is an object, and it captures a closure, i.e. those variables that are accessed in the body of the function. Memory allocations (both for function objects and classes) and virtual calls introduce runtime overhead.
@@ -1480,7 +1480,7 @@ When we don’t have function type parameter, reified type parameter, and we don
 Also there is the code size problem. Inlining a large function could dramatically increase the size of the bytecode because it's copied to every calls site. Inlining may cause the generated code to grow; however, if we do it in a reasonable way (i.e. avoiding inlining large functions), it will pay off in performance.
 
 **Source:** _stackoverflow.com_
-### Q6: How Kotlin coroutines are better than RxKotlin/RxJava? ☆☆☆☆☆
+### How Kotlin coroutines are better than RxKotlin/RxJava? ☆☆☆☆☆
 
 **Answer:**
 Kotlin coroutines are different from Rx. Both are designed to address a problem of asynchronous programming, however their approach to solution is very different:
@@ -1499,7 +1499,7 @@ Coroutines are better to deal with resources
 
 
 **Source:** _stackoverflow.com_
-### Q7: What is the difference between launch/join and async/await in Kotlin coroutines? ☆☆☆☆☆
+###  What is the difference between launch/join and async/await in Kotlin coroutines? ☆☆☆☆☆
 
 **Answer:**
 * **launch** is used to** fire and forget coroutine**. It is like starting a new thread. If the code inside the `launch` terminates with exception, then it is treated like _uncaught_ exception in a thread -- usually printed to stderr in backend JVM applications and crashes Android applications. `join` is used to wait for completion of the launched coroutine and it does not propagate its exception. However, a crashed _child_ coroutine cancels its parent with the corresponding exception, too.
@@ -1507,7 +1507,7 @@ Coroutines are better to deal with resources
 * **async** is used to **start a coroutine that computes some result**. The result is represented by an instance of `Deferred` and you **must** use `await` on it. An uncaught exception inside the async code is stored inside the resulting `Deferred` and is not delivered anywhere else, it will get silently dropped unless processed. **You MUST NOT forget about the coroutine you’ve started with async.**
 
 **Source:** _stackoverflow.com_
-### Q68: What is the difference between Java field and Kotlin property? ☆☆☆☆☆
+###  What is the difference between Java field and Kotlin property? ☆☆☆☆☆
 
 **Answer:**
 This is an example of a Java field:
@@ -1531,7 +1531,7 @@ public void setName(String name) {
 The default implementation of Kotlin property includes field and accessors (getter for val, and getter and setter for var). Thanks to that, we can always replace accessors default implementation with a custom one.
 
 **Source:** _blog.kotlin-academy.com_
-### Q69: What is the difference between and interface and an abstract class? ☆☆
+###  What is the difference between and interface and an abstract class? ☆☆
 
 **Answer:**
 Though both may seem very similar they are in fact very different and serve very different purposes. Abstract classes are meant to serve the purpose of Generalizing behavior while interfaces are meant to serve the purpose of Standardizing behavior.
