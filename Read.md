@@ -2,7 +2,19 @@
  
 ## Kotlin
 
-### Q1: What is a primary constructor in Kotlin? ☆☆
+ ### How does Kotlin work on Android?
+ **Answer:**
+Just like Java, the Kotlin code is also compiled into the Java bytecode and is executed at runtime by the Java Virtual Machine i.e. JVM. When a Kotlin file named Main.kt is compiled then it will eventually turn into a class and then the bytecode of the class will be generated. The name of the bytecode file will be MainKt.class and this file will be executed by the JVM.
+
+###  How to convert a Kotlin source file to a Java source file?
+**Answer:**
+Steps to convert your Kotlin source file to Java source file:
+
+Open your Kotlin project in the IntelliJ IDEA / Android Studio.
+Then navigate to Tools > Kotlin > Show Kotlin Bytecode.
+Now click on the Decompile button to get your Java code from the bytecode.
+
+###  What is a primary constructor in Kotlin? ☆☆
 
 **Answer:**
 The **primary constructor** is part of the class header. Unlike Java, you don't need to declare a constructor in the body of the class. Here's an example:
@@ -16,7 +28,7 @@ class Person(val firstName: String, var age: Int) {
 The main idea is by removing the constructor keyword, our code gets simplified and easy to understand.
 
 **Source:** _www.programiz.com_
-### Q2: What is a data class in Kotlin? ☆☆
+### What is a data class in Kotlin? ☆☆
 
 **Answer:**
 We frequently create classes whose main purpose is to hold data. In Kotlin, this is called a data class and is marked as `data`:
@@ -32,7 +44,26 @@ To ensure consistency and meaningful behavior of the generated code, data classe
 * Data classes cannot be abstract, open, sealed or inner;
 
 **Source:** _kotlinlang.org_
-### Q3: Explain the Null safety in Kotlin ☆☆☆
+
+###  Is there any difference between == operator and === operator?
+**Answer:**
+Yes. The == operator is used to compare the values stored in variables and the === operator is used to check if the reference of the variables are equal or not. But in the case of primitive types, the === operator also checks for the value and not reference.
+
+###  What are visibility modifiers in Kotlin?
+**Answer:**
+A visibility modifier or access specifier or access modifier is a concept that is used to define the scope of something in a programming language. In Kotlin, we have four visibility modifiers:
+
+private: visible inside that particular class or file containing the declaration.
+
+protected: visible inside that particular class or file and also in the subclass of that particular class where it is declared.
+
+internal: visible everywhere in that particular module.
+
+public: visible to everyone.
+
+Note: By default, the visibility modifier in Kotlin is public.
+
+### Explain the Null safety in Kotlin ☆☆☆
 
 **Answer:**
 Kotlin's type system is aimed at eliminating the danger of null references from code, also known as the The Billion Dollar Mistake.
@@ -53,7 +84,13 @@ print(b)
 ```
 
 **Source:** _kotlinlang.org_
-### Q4: How are extensions resolved in Kotlin and what doest it mean? ☆☆☆
+
+### What is the use of @JvmStatic, @JvmOverloads, and @JvmFiled in Kotlin?
+**Answer:**
+@JvmStatic: This annotation is used to tell the compiler that the method is a static method and can be used in Java code.
+@JvmOverloads: To use the default values passed as an argument in Kotlin code from the Java code, we need to use the @JvmOverloads annotation.
+@JvmField: To access the fields of a Kotlin class from Java code without using any getters and setters, we need to use the @JvmField in the Kotlin code.
+### How are extensions resolved in Kotlin and what doest it mean? ☆☆☆
 
 **Answer:**
 Extensions do not actually modify classes they extend. By defining an extension, you do not insert new members into a class, but merely make new functions callable with the dot-notation on variables of this type.
@@ -90,7 +127,15 @@ BaseClass.someMethod
 because the extension function being called depends only on the declared type of the parameter `base` in `printMessage` method, which is the `BaseClass` class. This is different from runtime polymorphism as here it is resolved **statically** but not at the runtime.
 
 **Source:** _medium.com_
-### Q5: What is a purpose of Companion Objects in Kotlin? ☆☆☆
+
+
+### Is there any relationship between primary and secondary constructors?
+**Answer:**
+Yes, when using a secondary constructor, you need to call the primary constructor explicitly.
+### What are Higher-Order functions in Kotlin?
+**Answer:**
+A higher-order function is a function that takes functions as parameters or returns a function. For example, A function can take functions as parameters.
+### What is a purpose of Companion Objects in Kotlin? ☆☆☆
 
 **Answer:**
 Unlike Java or C#, Kotlin doesn’t have `static` members or member functions. If you need to write a function that can be called without having a class instance but needs access to the internals of a class, you can write it as a member of a **companion object** declaration inside that class.
@@ -108,7 +153,7 @@ val firebaseManager = EventManager.FirebaseManager
 The companion object is a singleton. The companion object is a **proper object** on its own, and can have its own supertypes - and you can assign it to a variable and pass it around. If you're integrating with Java code and need a true static member, you can annotate a member inside a companion object with `@JvmStatic`.
 
 **Source:** _kotlinlang.org_
-### Q6: What is Lateinit in Kotlin and when would you use it? ☆☆☆
+### What is Lateinit in Kotlin and when would you use it? ☆☆☆
 
 **Answer:**
 **lateinit** means _late initialization_. If you do not want to initialize a variable in the constructor instead you want to initialize it later on and if you can guarantee the initialization before using it, then declare that variable with lateinit keyword. It will not allocate memory until initialized. You cannot use lateinit for primitive type properties like Int, Long etc.
@@ -145,7 +190,7 @@ val test: String by lazy {
 ```
 
 **Source:** _blog.mindorks.com_
-### Q8: When to use lateinit over lazy initialization in Kotlin? ☆☆☆
+### When to use lateinit over lazy initialization in Kotlin? ☆☆☆
 
 **Answer:**
 
@@ -170,7 +215,7 @@ Also compare:
 |Not allowed on properties of primitive types.|Allowed on properties of primitive types.|
 
 **Source:** _ahsensaeed.com_
-### Q9: May you briefly compare Kotlin vs Java? ☆☆☆
+### May you briefly compare Kotlin vs Java? ☆☆☆
 
 **Answer:**
 ||||
@@ -186,7 +231,7 @@ Also compare:
 |Functional Programming|Java doesn’t have functional programming support till Java 8 but while developing Android applications it supports the only subset of Java 8 features.|Kotlin is a mix of procedural and functional programming language which consists of many useful methods such as lambda, operator overloading, higher-order functions, and lazy evaluation, etc.|
 
 **Source:** _www.educba.com_
-### Q10: What are coroutines in Kotlin? ☆☆☆
+### What are coroutines in Kotlin? ☆☆☆
 
 **Answer:**
 Unlike many other languages with similar capabilities, async and await are not keywords in Kotlin and are not even part of its standard library. 
@@ -198,7 +243,7 @@ The documentation says Kotlin Coroutines are like lightweight threads. They are 
 Additionally, coroutines can be **suspended** and **resumed** mid-execution. This means you can have a long-running task, which you can execute little-by-little. You can pause it any number of times, and resume it when you’re ready again. 
 
 **Source:** _www.raywenderlich.com_
-### Q11: How to initialize an array in Kotlin with values? ☆☆
+### How to initialize an array in Kotlin with values? ☆☆
 
 **Details:**
 In Java an array can be initialized such as:
@@ -215,7 +260,7 @@ val numbers: IntArray = intArrayOf(10, 20, 30, 40, 50)
 ```
 
 **Source:** _stackoverflow.com_
-### Q12: What is the difference between var and val in Kotlin? ☆☆
+###  What is the difference between var and val in Kotlin? ☆☆
 
 **Answer:**
 * **var** is like `general` variable and it's known as a _mutable_ variable in kotlin and can be assigned multiple times.
@@ -236,7 +281,7 @@ val numbers: IntArray = intArrayOf(10, 20, 30, 40, 50)
 ```
 
 **Source:** _stackoverflow.com_
-### Q13: How to correctly concatenate a String in Kotlin? ☆☆
+### How to correctly concatenate a String in Kotlin? ☆☆
 
 **Answer:**
 In Kotlin, you can concatenate 
@@ -268,7 +313,7 @@ val c = "$a $b"
  ```
 
 **Source:** _stackoverflow.com_
-### Q14: What is basic difference between fold and reduce in Kotlin? When to use which? ☆☆
+### What is basic difference between fold and reduce in Kotlin? When to use which? ☆☆
 
 **Answer:**
 * `fold` takes an initial value, and the first invocation of the lambda you pass to it will receive that initial value and the first element of the collection as parameters.
@@ -289,7 +334,7 @@ val c = "$a $b"
  The first call to the lambda here will be with parameters `1` and `2`.
 
 **Source:** _stackoverflow.com_
-### Q15: What is the idiomatic way to remove duplicate strings from array? ☆☆
+### What is the idiomatic way to remove duplicate strings from array? ☆☆
 
 **Details:**
 How to remove duplicates from an `Array<String?>` in Kotlin?
@@ -309,7 +354,7 @@ You can also use:
 These functions produce a `Set` instead of a `List` and should be a little bit more efficient than distinct.
 
 **Source:** _stackoverflow.com_
-### Q16: How to create singleton in Kotlin? ☆☆
+### How to create singleton in Kotlin? ☆☆
 
 **Answer:**
 Just use `object`.
