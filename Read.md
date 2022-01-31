@@ -14,6 +14,14 @@ Open your Kotlin project in the IntelliJ IDEA / Android Studio.
 Then navigate to Tools > Kotlin > Show Kotlin Bytecode.
 Now click on the Decompile button to get your Java code from the bytecode.
 
+### What is the default behavior of Kotlin classes?
+**Answer:**
+By default, all classes are final in Kotlin. That's because Kotlin allows multiple inheritances for classes, and an open class is more expensive than a final class.
+
+### Does Kotlin provide support for primitive Datatypes?
+**Answer:**
+No. Kotlin does not provide support for primitive Data types like in Java.
+
 ###  What is a primary constructor in Kotlin? ☆☆
 
 **Answer:**
@@ -132,9 +140,15 @@ because the extension function being called depends only on the declared type of
 ### Is there any relationship between primary and secondary constructors?
 **Answer:**
 Yes, when using a secondary constructor, you need to call the primary constructor explicitly.
+
 ### What are Higher-Order functions in Kotlin?
 **Answer:**
 A higher-order function is a function that takes functions as parameters or returns a function. For example, A function can take functions as parameters.
+
+### What do you understand by destructuring in Kotlin?
+**Answer:**
+In Kotlin, destructuring is a convenient way to extract multiple values from data stored in objects and Arrays. It can be used in locations that receive data. It is used because sometimes, it is convenient to destructure an object into several variables.
+
 ### What is a purpose of Companion Objects in Kotlin? ☆☆☆
 
 **Answer:**
